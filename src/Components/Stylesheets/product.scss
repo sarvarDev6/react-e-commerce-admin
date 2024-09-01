@@ -1,0 +1,155 @@
+main {
+  height: 100vh;
+  min-height: 100vh;
+  overflow-x: scroll;
+  .top-action {
+    input {
+      padding: 10px 25px;
+      border-radius: 4px;
+      border: 1px solid #dddddd;
+    }
+    input:focus {
+      outline: 1.5px solid #ff6117;
+    }
+    button {
+      background-color: #ff6117;
+      padding: 10px 30px;
+      border-radius: 4px;
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+
+  .content-table {
+    position: relative;
+    left: 1.5rem;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 1555px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+    thead {
+      tr {
+        background-color: #ff6117;
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+      }
+    }
+
+    th,
+    td {
+      padding: 12px 10px;
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #dddddd;
+
+        td {
+          font-size: 1.1rem;
+        }
+
+        .action-btns {
+          height: 16vh;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          #edit-btn {
+            color: #ffffff;
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            background-color: rgb(255, 208, 0);
+            border-radius: 4px;
+          }
+
+          #delete-btn {
+            color: #ffffff;
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            background-color: rgb(230, 12, 12);
+            border-radius: 4px;
+          }
+        }
+      }
+      tr:last-of-type {
+        border-bottom: 2px solid #ff6117;
+      }
+      tr:hover {
+        color: #ff6117;
+        background-color: #f3f3f3;
+      }
+    }
+  }
+}
+
+.modalAddProduct {
+  overflow: hidden;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+  .modalBox {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    background: #dddddd;
+    width: 600px;
+    height: 750px;
+
+    i {
+      color: #ff6117;
+      cursor: pointer;
+      font-size: 2rem;
+      position: relative;
+      left: 34rem;
+      bottom: 3rem;
+    }
+
+    form {
+      text-align: center;
+
+      select {
+        border-radius: 5px 5px 0 0;
+        padding: 10px 195px;
+        margin-bottom: 1rem;
+
+        option {
+          background: #ffffff;
+        }
+        option:hover {
+          background: #ff6117;
+        }
+      }
+
+      input {
+        border-radius: 6px;
+        padding: 10px 170px;
+        margin-bottom: 1rem;
+      }
+      input:focus {
+        outline: 1.5px solid #ff6117;
+      }
+      button {
+        font-size: 1.2rem;
+        font-weight: 500;
+        background-color: #ff6117;
+        padding: 10px 30px;
+        color: #ffffff;
+        border-radius: 4px;
+      }
+    }
+  }
+}

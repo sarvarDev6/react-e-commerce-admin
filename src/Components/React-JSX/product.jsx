@@ -69,6 +69,7 @@ function Product() {
                   <option value="phone">Phone</option>
                   <option value="laptop">Laptop</option>
                   <option value="tablet">Tablet</option>
+                  <option value="watch">Watch</option>
                   <option value="accessuars">Accessuars</option>
                   <option value="pc-equipment">PC Equipment</option>
                 </select>
@@ -126,7 +127,7 @@ function Product() {
         <div className="top-action flex items-center justify-between mt-5">
           <h1 className="text-4xl font-semibold ml-5">Product</h1>
           <div className="flex mr-16 gap-5">
-            <input type="text" placeholder="search-products" onChange={(e) => setSearch(e.target.value)} />
+            <input type="search" placeholder="search-products" onChange={(e) => setSearch(e.target.value)} />
             <button onClick={() => setIsOpen(true)}>Add Product +</button>
           </div>
         </div>
@@ -155,7 +156,7 @@ function Product() {
                     <td><img src={item.img_1} alt={item.name} className="w-32" /></td>
                     <td><img src={item.img_2} alt={item.name} className="w-32" /></td>
                     <td><img src={item.img_3} alt={item.name} className="w-32" /></td>
-                    <td>{item.name}</td>
+                    <td className="w-56">{item.name}</td>
                     <td>{item.category}</td>
                     <td>{item.discount}%</td>
                     <td>{item.price} UZS</td>
